@@ -6,7 +6,7 @@ export default function App() {
   const [showStatic, setShowStatic] = useState(false);
 
   return (
-    <div className="size-full flex flex-col items-center justify-center bg-gradient-to-br from-[#1a2332] to-[#0d1520]">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-[#1a2332] to-[#0d1520]">
       {showStatic ? <PromoPopLogoStatic /> : <PromoPopLogo />}
 
       <button
