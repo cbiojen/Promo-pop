@@ -1,4 +1,5 @@
 # PromoPop
+[![PromoPop Logo](https://cbiojen.github.io/Promo-pop/logo.svg)](https://cbiojen.github.io/Promo-pop/)
 
 <div align="center">
   
