@@ -1,5 +1,7 @@
 # PromoPop Nextflow Pipeline (`promopop_nf`)
 
+[![PromoPop Logo](https://cbiojen.github.io/Promo-pop/logo/logo.svg)](https://cbiojen.github.io/Promo-pop/)
+
 This pipeline identifies promoter-region variants for IBD genes, extracts genotype data, computes genotype counts and MAF, compares against imported European MAF, and generates summary plots.
 
 ## Workflow overview
