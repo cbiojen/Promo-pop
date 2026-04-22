@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Input/output datasets and pipeline products
+data/
+results/
+
+# Nextflow runtime and cache artifacts
+work/
+.nextflow/
+.nextflow.log*
+
+# Temporary/debug artifacts
+*.tmp
+*.bak
