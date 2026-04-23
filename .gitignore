@@ -1,12 +1,19 @@
-# Pipeline outputs
-/data/
-/results/
-/work/
-/.nextflow/
+# macOS
+.DS_Store
 
-# Nextflow logs
-.nextflow.log
-.nextflow.log.*
+# Input/output datasets and pipeline products
+data/
+results/
 
-# Docs
+# Nextflow runtime and cache artifacts
+work/
+.nextflow/
+.nextflow.log*
+
+# Temporary/debug artifacts
+*.tmp
+*.bak
+
+# Local machine-specific config
+params.local.json
 SUMMARY.md
