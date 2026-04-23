@@ -1,0 +1,8 @@
+{
+  "genelist": "/ABSOLUTE/PATH/TO/secure_data/my_genelist.txt",
+  "promoter_db": "/ABSOLUTE/PATH/TO/secure_data/my_promoterAI_tss500.tsv",
+  "plink_prefix": "/ABSOLUTE/PATH/TO/secure_data/my_cohort",
+  "european_maf_file": "/ABSOLUTE/PATH/TO/secure_data/my_eur_maf.tsv",
+  "plink_container": "promopop-plink2:latest",
+  "maf_plot_title": "MAF distribution for IBD_AA vs. EUR"
+}

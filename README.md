@@ -85,6 +85,20 @@ NXF_VER=25.10.4 nextflow run main.nf -profile docker -resume \
    --european_maf_file data/final_MAF_counts.txt
 ```
 
+### Run with secure external data (recommended)
+
+Keep private datasets outside the repo and pass their paths via a local params file:
+
+1. Copy [params.example.json](params.example.json) to `params.local.json`.
+2. Edit `params.local.json` with absolute paths in your secure storage location.
+3. Run:
+
+```bash
+NXF_VER=25.10.4 nextflow run main.nf -profile docker -resume -params-file params.local.json
+```
+
+`params.local.json` is ignored by git so data paths stay local.
+
 ## Main Outputs
 
 Published to [results](results):

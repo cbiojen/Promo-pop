@@ -13,3 +13,7 @@ work/
 # Temporary/debug artifacts
 *.tmp
 *.bak
+
+# Local machine-specific config
+params.local.json
+SUMMARY.md
