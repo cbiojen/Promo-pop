@@ -11,16 +11,12 @@ process MERGE_PROMOTER_BIM_RECORDS {
 
     script:
     """
-<<<<<<< HEAD
-    python - <<'PY'
-=======
     PYTHON_BIN="\$(command -v python3 || command -v python)"
     if [[ -z "\$PYTHON_BIN" ]]; then
         echo "ERROR: Neither python3 nor python is available in PATH" >&2
         exit 127
     fi
     "\$PYTHON_BIN" - <<'PY'
->>>>>>> chore/reproducible-pipeline-setup
 import csv
 
 promoter_ai_file = "${promoter_ai_records}"

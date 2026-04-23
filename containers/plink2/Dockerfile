@@ -13,8 +13,3 @@ RUN curl -L --fail -o /tmp/plink2.zip https://s3.amazonaws.com/plink2-assets/pli
     rm -f /tmp/plink2.zip
 
 WORKDIR /work
-<<<<<<< HEAD
-
-ENTRYPOINT ["plink2"]
-=======
->>>>>>> chore/reproducible-pipeline-setup

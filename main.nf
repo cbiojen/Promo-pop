@@ -14,8 +14,40 @@ include { COMPARE_WITH_EUR_MAF } from './modules/compare_with_eur_maf.nf'
 include { PLOT_MAF_DISTRIBUTION } from './modules/plot_maf_distribution.nf'
 include { PLOT_PROMOTERAI_BY_CHROMOSOME } from './modules/plot_promoterai_by_chromosome.nf'
 
+process PRINT_THANK_YOU {
+
+    input:
+    path promoterai_png
+
+    output:
+    stdout
+
+    script:
+    """
+    cat <<'EOF'
+=============================================================
+PromoPop pipeline completed successfully.
+All processes completed successfully. Coffee earned.
+Thank you, Jennifer Xu!
+=============================================================
+EOF
+    """
+}
+
 workflow {
 
+    log.info '============================================================='
+    log.info 'Promopop pipeline start running'
+    log.info '============================================================='
+    log.info ' _ __  _ __ ___  _ __ ___   ___  _ __   ___  _ __'
+    log.info "| '_ \\| '__/ _ \\| '_ ` _ \\ / _ \\| '_ \\ / _ \\| '_ \\"
+    log.info '| |_) | | | (_) | | | | | | (_) | |_) | (_) | |_) |'
+    log.info "| .__/|_|  \\___/|_| |_| |_|\\___/| .__/ \\___/| .__/ "
+    log.info '|_|                             |_|         |_|'
+    log.info "\nPromoPop pipeline started • run=${workflow.runName} • profile=${workflow.profile ?: 'default'}"
+    log.info '-------------------------------------------------------------'
+
+    
     bim_file = params.bim_file ?: "${params.plink_prefix}.bim"
 
     promoter_records =
@@ -88,8 +120,10 @@ workflow {
             maf_aa_vs_eur
         )
 
-    promoterai_chrom_plot =
+    def (promoterai_png, promoterai_pdf, promoterai_plot_data) =
         PLOT_PROMOTERAI_BY_CHROMOSOME(
             merged_with_genocounts
         )
+
+    PRINT_THANK_YOU(promoterai_png).view { it.trim() }
 }
