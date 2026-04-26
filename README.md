@@ -103,20 +103,6 @@ Published to [results](results):
 - Keep private dataset paths in `params.local.json`.
 - `params.local.json` is ignored by git.
 
-## Troubleshooting
-
-- `CondaError: Run 'conda init' before 'conda activate'`
-  - Run `conda init bash`, then reopen the terminal or source `~/.bash_profile`.
-
-- `failed to connect to the docker API ... /var/run/docker.sock`
-  - Start Docker Desktop and rerun the command.
-
-- `plink2: command not found` in `EXPORT_GENOTYPE_WITH_PLINK`
-  - Use `-profile docker`.
-
-- Empty `MAF_EUR` values in the final table
-  - Verify the European MAF file has the expected CHROM/POS/ID + MAF columns.
-
 ## Notes
 
 - Pipeline configuration: [nextflow.config](nextflow.config)
