@@ -17,3 +17,4 @@ work/
 # Local machine-specific config
 params.local.json
 SUMMARY.md
+params.pace.json
